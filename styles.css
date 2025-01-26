@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+/* End CSS Reset */
+
+:root {
+  --bg__color: hsl(47, 88%, 63%);
+  --bg__card__color: hsl(0, 0%, 100%);
+  --text__color: hsl(0, 0%, 42%);
+  --header__color: hsl(0, 0%, 7%);
+}
+
+body {
+  font-family: "Figtree", sans-serif;
+  background-color: var(--bg__color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main {
+  background-color: var(--bg__card__color);
+  border-radius: 20px;
+  border: 1px solid #000;
+  box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  width: 375px;
+  margin: 0 16px;
+}
+
+.illustration {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.card__title {
+  display: inline-block;
+  margin: 18px 0px;
+  padding: 4px 10px;
+  font-weight: 700;
+  line-height: 150%;
+  font-size: 14px;
+  color: var(--header__color);
+  background-color: var(--bg__color);
+  border-radius: 4px;
+}
+
+.publish_date {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--header__color);
+  line-height: 150%;
+}
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--header__color);
+  line-height: 150%;
+  margin: 12px 0px;
+}
+.title:hover {
+  color: var(--bg__color);
+  cursor: pointer;
+}
+.description {
+  color: var(--text__color);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+}
+.author {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+  gap: 0.5em;
+  font-weight: 700;
+  margin: 20px 0px 0px 0px;
+}
+.author img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
